@@ -1,0 +1,369 @@
+/* change these */
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400italic,800italic,400,800");
+/* @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap'); */
+@import url("https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic");
+@import url("https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+/* THIS IS ALL meant for editing. You might want to do it differently, 
+name the variables differently, 
+use the fonts in other ways in the font hierarchy etc. */
+
+/* change these */
+:root {
+  --bg-color: #506485;
+  --link-color: #4a999c;
+  --link-hover-color: #d0d0bd;
+  --color-4: #8b6b89;
+  --color-5: #d4848f;
+
+  --primary-font: "Open Sans", sans-serif;
+  --secondary-font: "Droid Serif", serif;
+  --main-text-color: #fff;
+
+  --white-space: 1rem;
+}
+.primary-button {
+  width: 150px;
+  height: 70px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #4a999c;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 5px;
+  font-family: "Bookmark";
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.primary-button:before {
+  content: "";
+  background: linear-gradient(45deg, #8b6b89, #d4848f);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.primary-button:active {
+  color: #4a999c;
+}
+
+.primary-button:active:after {
+  background: transparent;
+}
+
+.primary-button:hover:before {
+  opacity: 1;
+}
+
+.primary-button:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #4a999c;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+.secondary-button {
+  width: 150px;
+  height: 70px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #4a999c;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 100%;
+  font-family: "Bookmark";
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.secondary-button:before {
+  content: "";
+  background: linear-gradient(45deg, #8b6b89, #d4848f);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 100%;
+}
+
+.secondary-button:active {
+  color: #4a999c;
+}
+
+.secondary-button:active:after {
+  background: transparent;
+}
+
+.secondary-button:hover:before {
+  opacity: 1;
+}
+
+.secondary-button:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #4a999c;
+  left: 0;
+  top: 0;
+  border-radius: 100%;
+}
+
+a {
+  transition: all 3s;
+  font-family: "MedievalSharp";
+}
+
+a:hover {
+  font-size: 2rem;
+  background-image: linear-gradient(90deg, #8b6b89, #d4848f);
+  background-size: 100%;
+  font-family: "MedievalSharp";
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+html {
+  font-size: 100%;
+  font-family: var(--primary-font);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+header,
+main,
+footer {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: calc(2 * var(--white-space));
+}
+
+.full-width {
+  background: #333;
+  color: white;
+  width: 100%;
+}
+
+.header-wrapper h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  padding-right: 0.75em;
+  font-weight: bold;
+  color: white;
+  font-family: "MedievalSharp";
+}
+
+.header-wrapper h2 {
+  font-size: 1.6em;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: bold;
+  margin: var(--white-space) 0;
+  font-family: "Bookmark";
+}
+
+.header-wrapper h3 {
+  font-size: 1.2rem;
+  font-style: italic;
+  font-family: "Baskerville";
+}
+
+.header-wrapper h4 {
+  font-size: 0.8rem;
+  font-family: "Baskerville";
+}
+
+main {
+  padding: calc(2 * var(--white-space));
+  background-color: #333;
+}
+
+section {
+  margin-bottom: calc(4 * var(--white-space));
+}
+
+.section-heading {
+  font-style: italic;
+  font-size: 1.3rem;
+  color: #777;
+  margin: 0.5rem 0;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.swatches li {
+  margin-right: 5vw;
+  height: 15vw;
+  width: 20%;
+}
+
+ul li:last-child {
+  margin-right: 0;
+}
+
+.color-swatch-1 {
+  background-color: var(--bg-color);
+}
+
+.color-swatch-2 {
+  background-color: var(--link-color);
+}
+
+.color-swatch-3 {
+  background-color: var(--link-hover-color);
+}
+
+.color-swatch-4 {
+  background-color: var(--color-4);
+}
+
+.color-swatch-5 {
+  background-color: var(--color-5);
+}
+.color-swatch-6 {
+  background-color: var(--color-6);
+}
+
+.images ul {
+  flex-direction: column;
+  text-align: center;
+}
+
+.images li {
+  display: block;
+  /*margin-right: 5vw;*/
+  margin-bottom: 1rem;
+}
+
+.typography-main {
+  color: var(--main-text-color);
+}
+
+.h1-sample {
+  font-size: 2.4rem;
+  font-weight: bold;
+  font-family: "MedievalSharp";
+}
+
+.h2-sample {
+  font-family: "Bookmark";
+  font-size: 1.5rem;
+}
+
+p.typography-sample {
+  font-family: "Baskerville";
+  line-height: 1.5;
+  max-width: 960px;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+a {
+  font-family: "MedievalSharp";
+  color: var(--link-color);
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+p[class*="font-details-"] {
+  margin-top: 0.5rem;
+  margin-bottom: calc(2 * var(--white-space));
+  font-size: 0.75rem;
+  font-family: var(--secondary-font);
+  color: #6f6f6f;
+}
+
+.adjectives ul {
+  font-size: 2rem;
+  opacity: 0.5;
+  font-family: "Baskerville";
+  color: #fff;
+}
+
+.adjectives ul {
+  flex-direction: column;
+}
+
+footer {
+  font-style: italic;
+}
+
+@media (min-width: 800px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4rem;
+  }
+
+  .swatches li {
+    margin-right: 3%;
+    height: 10vw;
+    width: 20%;
+  }
+
+  .textures li {
+    height: 15vw;
+  }
+}
+
+@media (min-width: 900px) {
+  .adjectives ul {
+    flex-direction: row;
+  }
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
